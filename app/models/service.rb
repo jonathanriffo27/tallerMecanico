@@ -8,6 +8,9 @@
 #  updated_at :datetime         not null
 #
 class Service < ApplicationRecord
+  # Relaciones
+  has_many :vehicle_services, dependent: :destroy
+  has_many :vehicles, through: :vehicle_services
   # Validaciones
   validates :name, presence: true, uniqueness: true
 end

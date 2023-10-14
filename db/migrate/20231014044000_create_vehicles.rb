@@ -5,8 +5,8 @@ class CreateVehicles < ActiveRecord::Migration[7.0]
       t.string :brand
       t.string :model
       t.string :year
-      t.string :replaced_parts
-      t.string :finish_time
+      t.text :replaced_parts
+      t.date :finish_time
 
       t.timestamps
     end
