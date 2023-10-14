@@ -25,4 +25,6 @@ class User < ApplicationRecord
   validates :phone, presence: true
 
   enum :role, %i[regular admin]
+
+  # Relaciones
 end

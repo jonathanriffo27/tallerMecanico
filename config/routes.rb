@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vehicles
   resources :contacts, only: %i[new create]
   get 'inicio', to: 'pages#home'
   get 'acerca_de_nosotros', to: 'pages#about_us'
