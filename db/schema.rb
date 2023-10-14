@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_14_035852) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_14_044000) do
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -45,15 +45,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_14_035852) do
     t.string "brand"
     t.string "model"
     t.string "year"
-    t.integer "service_id", null: false
     t.string "replaced_parts"
     t.string "finish_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["service_id"], name: "index_vehicles_on_service_id"
     t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
-  add_foreign_key "vehicles", "services"
   add_foreign_key "vehicles", "users"
 end

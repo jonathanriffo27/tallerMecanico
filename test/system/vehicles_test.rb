@@ -18,7 +18,6 @@ class VehiclesTest < ApplicationSystemTestCase
     fill_in "Finish time", with: @vehicle.finish_time
     fill_in "Model", with: @vehicle.model
     fill_in "Replaced parts", with: @vehicle.replaced_parts
-    fill_in "Service", with: @vehicle.service_id
     fill_in "User", with: @vehicle.user_id
     fill_in "Year", with: @vehicle.year
     click_on "Create Vehicle"
@@ -35,7 +34,6 @@ class VehiclesTest < ApplicationSystemTestCase
     fill_in "Finish time", with: @vehicle.finish_time
     fill_in "Model", with: @vehicle.model
     fill_in "Replaced parts", with: @vehicle.replaced_parts
-    fill_in "Service", with: @vehicle.service_id
     fill_in "User", with: @vehicle.user_id
     fill_in "Year", with: @vehicle.year
     click_on "Update Vehicle"

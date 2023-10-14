@@ -27,4 +27,5 @@ class User < ApplicationRecord
   enum :role, %i[regular admin]
 
   # Relaciones
+  has_many :vehicles, dependent: :destroy
 end
