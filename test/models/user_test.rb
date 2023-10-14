@@ -12,6 +12,7 @@
 #  phone                  :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role                   :integer          default(0)
 #
 require "test_helper"
 

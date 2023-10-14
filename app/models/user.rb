@@ -12,10 +12,17 @@
 #  phone                  :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  role                   :integer          default(0)
 #
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # Validaciones
+  validates :name, presence: true
+  validates :phone, presence: true
+
+  enum :role, %i[regular admin]
 end
