@@ -10,34 +10,34 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.collection_select :user_id, User.all, :id, :name %>
+    <%= form.label :user_id, 'Usuario', style: "display: block", class:'form-label' %>
+    <%= form.collection_select( :user_id, User.all, :id, :name,{include_blank: true}, {class: "form-select w-50", required: true}) %>
   </div>
   <div>
-    <%= form.label :brand, style: "display: block" %>
-    <%= form.text_field :brand %>
+    <%= form.label :brand, 'Marca', style: "display: block", class:'form-label' %>
+    <%= form.text_field :brand, class:'form-control w-50', required: true %>
   </div>
   <div>
-    <%= form.label :model, style: "display: block" %>
-    <%= form.text_field :model %>
+    <%= form.label :model,'Modelo', style: "display: block", class:'form-label' %>
+    <%= form.text_field :model, class:'form-control w-50', required: true %>
   </div>
   <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.text_field :year %>
+    <%= form.label :year, 'Año', style: "display: block", class:'form-label' %>
+    <%= form.text_field :year, class:'form-control w-50', required: true %>
   </div>
   <div>
-    <%= form.label :service, style: "display: block" %>
-    <%= form.collection_check_boxes :service_ids, Service.all, :id, :name %>
+    <%= form.label :service, 'Servicios de reparacion', style: "display: block", class:'form-label' %>
+    <%= form.collection_check_boxes :service_ids, Service.all, :id, :name,{include_blank: true}, {class: "form-check-input"} %>
   </div>
   <div>
-    <%= form.label :replaced_parts, style: "display: block" %>
-    <%= form.text_area :replaced_parts %>
+    <%= form.label :replaced_parts, 'Repuesto a reemplazar', style: "display: block", class:'form-label' %>
+    <%= form.text_area :replaced_parts, class:'form-control w-50', required: true %>
   </div>
   <div>
-    <%= form.label :finish_time, style: "display: block" %>
-    <%= form.date_field :finish_time %>
+    <%= form.label :finish_time, 'Fecha de entrega', style: "display: block", class:'form-label' %>
+    <%= form.date_field :finish_time, class:'form-control w-50', required: true %>
   </div>
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Crear', class:'btn btn-primary mt-4' %>
   </div>
 <% end %>

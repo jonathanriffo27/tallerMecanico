@@ -28,9 +28,15 @@
           </a>
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
-              <li>
-                <%= link_to 'Mi vehiculo', mi_perfil_path, class:"dropdown-item" %>
-              </li>
+              <% if current_user.role == 'admin' %>
+                <li>
+                  <%= link_to 'Panel de Control', vehicles_path, class:"dropdown-item" %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to 'Mi vehiculo', mi_perfil_path, class:"dropdown-item" %>
+                </li>
+              <% end %>
               <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
             <% else %>
               <li><%= link_to 'Iniciar sesión',  new_user_session_path, class: 'dropdown-item'%></li>

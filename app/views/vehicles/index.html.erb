@@ -1,15 +1,22 @@
 <p style="color: green"><%= notice %></p>
-<h1>Vehicles</h1>
+<%= link_to "Nuevo vehiculo", new_vehicle_path, class:'btn btn-primary' %>
+<%= link_to "Nuevo Usuario", new_user_registration_path, class:'btn btn-primary' %>
+<h1 class='py-4'>Vehiculos</h1>
 <div id="vehicles">
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <% @vehicles.each do |vehicle| %>
       <div class="col">
         <%= render vehicle %>
-        <p>
-          <%= link_to "Show this vehicle", vehicle %>
+        <p class='ms-3 fs-4 text-success'>
+          <strong> Estado de reparaciones:</strong> En Progreso
+        </p>
+        <p class='ps-3'>
+          <%= link_to "Ver vehiculo", vehicle, class:'btn btn-sm btn-secondary' %>
         </p>
       </div>
     <% end %>
   </div>
 </div>
-<%= link_to "New vehicle", new_vehicle_path %>
+<div class="d-flex justify-content-center py-5">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>

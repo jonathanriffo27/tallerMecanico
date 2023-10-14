@@ -1,10 +1,7 @@
-<h1>Editing vehicle</h1>
-
+<h1>Editando vehiculo</h1>
 <%= render "form", vehicle: @vehicle %>
-
 <br>
-
-<div>
-  <%= link_to "Show this vehicle", @vehicle %> |
-  <%= link_to "Back to vehicles", vehicles_path %>
+<div class='mb-5 d-flex justify-content-end gap-3'>
+  <%= link_to "Mostrar vehiculo", @vehicle, class:'btn btn-secondary' %>
+  <%= link_to "Volver al inicio", vehicles_path, class:'btn btn-secondary' %>
 </div>
