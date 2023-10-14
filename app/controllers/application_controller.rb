@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name phone])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name phone])
   end
+
+  def authorize_request(kind = nil)
+    return if kind.include?(current_user.role)
+
+    redirect_to root_path, notice: 'No tienes permisos para acceder a esta página'
+  end
 end

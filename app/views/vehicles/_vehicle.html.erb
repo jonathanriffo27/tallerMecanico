@@ -1,32 +1,17 @@
 <div id="<%= dom_id vehicle %>">
-  <p>
-    <strong>User:</strong>
-    <%= vehicle.user.name %>
-  </p>
-  <p>
-    <strong>Brand:</strong>
-    <%= vehicle.brand %>
-  </p>
-  <p>
-    <strong>Model:</strong>
-    <%= vehicle.model %>
-  </p>
-  <p>
-    <strong>Year:</strong>
-    <%= vehicle.year %>
-  </p>
-  <p>
-    <strong>Services:</strong>
-    <% vehicle.services.each do |service| %>
-      <%= service.name %>
-    <% end %>
-  </p>
-  <p>
-    <strong>Replaced parts:</strong>
-    <%= vehicle.replaced_parts %>
-  </p>
-  <p>
-    <strong>Finish time:</strong>
-    <%= vehicle.finish_time %>
-  </p>
+  <div class="card" >
+    <div class="card-body">
+      <h5 class="card-title"><%= vehicle.brand %> <%= vehicle.model %> <%= vehicle.year %></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= vehicle.user.name %></h6>
+      <p class="card-text"><strong>Servicios de reparacion:</strong>
+        <% vehicle.services.each do |service| %>
+          <%= service.name %> -
+        <% end %> <br>
+        <strong>Repuestos reemplazados:</strong>
+        <%= vehicle.replaced_parts %><br>
+        <strong>Fecha de entrega</strong>
+        <%= vehicle.finish_time %>
+      </p>
+    </div>
+  </div>
 </div>

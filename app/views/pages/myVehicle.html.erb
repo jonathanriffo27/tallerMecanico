@@ -1,0 +1,12 @@
+<div id="vehicles">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <% @vehiclesUser.each do |vehicle| %>
+      <div class="col">
+        <%= render vehicle %>
+        <p class='ms-3 fs-4 text-success'>
+          <strong> Estado de reparaciones:</strong> En Progreso
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

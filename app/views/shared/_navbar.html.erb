@@ -1,25 +1,22 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <%= link_to 'El Tuercas', root_path, class: 'navbar-brand text-dark fw-semibold fs-4' %>
+    <%= link_to 'El Tuercas', root_path, class: 'navbar-brand text-primary fw-semibold fs-4' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <%= link_to 'Inicio', inicio_path, class:"nav-link" %>
+          <%= link_to 'Servicios disponibles', servicios_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Acerca del taller', acerca_de_nosotros_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Servicios disponibles', servicios_path, class:"nav-link" %>
-        </li>
-        <li class="nav-item">
           <%= link_to 'Horarios de atencion', horarios_path, class:"nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Contacto', contacto_path, class:"nav-link" %>
+          <%= link_to 'Contacto', new_contact_path, class:"nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,7 +29,7 @@
           <ul class="dropdown-menu">
             <% if user_signed_in? %>
               <li>
-                <%= link_to 'Mi vehiculo', contacto_path, class:"dropdown-item" %>
+                <%= link_to 'Mi vehiculo', mi_perfil_path, class:"dropdown-item" %>
               </li>
               <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
             <% else %>

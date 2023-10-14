@@ -6,26 +6,42 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-servicios = ['mantenimiento',
-             'afinación',
-             'cambio de neumáticos',
-             'alineado y balanceo',
-             'cambio de aceite y filtro',
-             'desabolladura y pintura',
-             'diagnóstico vehicular',
-             'reparación y mantenimiento de frenos']
+# servicios = ['Mantenimiento',
+#              'Afinación',
+#              'Cambio de neumáticos',
+#              'Alineado y balanceo',
+#              'Cambio de aceite y filtro',
+#              'Desabolladura y pintura',
+#              'Diagnóstico vehicular',
+#              'Reparación y mantenimiento de frenos']
 
-servicios.each do |servicio|
-  Service.create(name: servicio)
-end
+# servicios.each do |servicio|
+#   Service.create(name: servicio)
+# end
 
-20.times do
-  User.create(
-    name: Faker::Name.name,
-    password: '123456',
-    password_confirmation: '123456',
-    email: Faker::Internet.email,
-    phone: Faker::PhoneNumber.cell_phone_in_e164,
-    role: %i[regular admin].sample
+# 20.times do
+#   User.create(
+#     name: Faker::Name.name,
+#     password: '123456',
+#     password_confirmation: '123456',
+#     email: Faker::Internet.email,
+#     phone: Faker::PhoneNumber.cell_phone_in_e164,
+#     role: %i[regular admin].sample
+#   )
+# end
+
+# 30.times do
+#   Vehicle.create(
+#     user_id: User.all.sample.id,
+#     brand: Faker::Vehicle.manufacture,
+#     model: Faker::Vehicle.model,
+#     year: Faker::Vehicle.year
+#   )
+# end
+
+70.times do
+  VehicleService.create(
+    vehicle_id: Vehicle.all.sample.id,
+    service_id: Service.all.sample.id
   )
 end

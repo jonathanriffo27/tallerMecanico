@@ -23,5 +23,4 @@ class Vehicle < ApplicationRecord
   validates :brand, presence: true
   validates :model, presence: true
   validates :year, presence: true
-  validates :replaced_parts, presence: true
 end

@@ -10,7 +10,7 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, 'Nombre', style: "display: block" %>
     <%= form.text_field :name, required: true %>
   </div>
   <div>
@@ -18,10 +18,10 @@
     <%= form.email_field :email, required: true %>
   </div>
   <div>
-    <%= form.label :message, style: "display: block" %>
+    <%= form.label :message, 'Mensaje', style: "display: block" %>
     <%= form.text_area :message, required: true %>
   </div>
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Enviar', class:'btn btn-primary' %>
   </div>
 <% end %>
