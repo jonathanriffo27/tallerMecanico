@@ -1,34 +1,45 @@
-# Taller Mecánico "El Tuercas"
+# Aplicación web para el taller mecánico "El Tuercas"
 
-Este es un archivo PDF que contiene información sobre la aplicación web del taller mecánico "El Tuercas". En este PDF encontrarás los requisitos y especificaciones necesarias para desarrollar la aplicación, así como información sobre las funcionalidades que ofrece.
+Este proyecto es una aplicación web que permite gestionar los clientes, vehículos, servicios y citas de reparación del taller mecánico "El Tuercas"[^1^][1]. La aplicación tiene una landing page para los clientes, donde pueden ver información sobre el taller y el estado de sus vehículos[^2^][2]. También tiene una sección administrativa para el personal del taller, donde pueden gestionar las citas y los servicios de reparación, así como agregar, editar y eliminar clientes y vehículos[^3^][3]. Además, la aplicación implementa un sistema de “notificaciones” para informar a los clientes cuando su vehículo esté listo para ser recogido[^5^][5].
 
-## Contenido
+## Requisitos
 
-El PDF está dividido en tres secciones:
+Para ejecutar esta aplicación se necesita:
 
-### : Introducción
+- Python 3.9 o superior
+- Flask 2.0.2 o superior
+- SQLAlchemy 1.4.25 o superior
+- Bootstrap 5.1.3 o superior
 
-En esta sección se describe la necesidad de una aplicación web para gestionar clientes, vehículos, servicios y citas de reparación. También se menciona que los clientes podrán ver el estado de sus vehículos y recibir notificaciones sobre el progreso de las reparaciones.
+## Instalación
 
-### : Requisitos
+Para instalar esta aplicación se debe seguir estos pasos:
 
-En esta sección se detallan los requisitos específicos de la aplicación, como el modelo conceptual, lógico y físico, la landing page para clientes y el estado de reparaciones para clientes. A continuación se describen los requisitos en detalle:
+- Descargar el archivo .zip del proyecto y descomprimirlo en una carpeta.
+- Abrir una terminal y navegar hasta la carpeta del proyecto.
+- Crear un entorno virtual con el comando `python -m venv venv`
+- Activar el entorno virtual con el comando `venv\Scripts\activate` (Windows) o `source venv/bin/activate` (Linux/Mac)
+- Instalar las dependencias con el comando `pip install -r requirements.txt`
+- Crear la base de datos con el comando `python create_db.py`
+- Ejecutar la aplicación con el comando `python app.py`
 
-- **Modelo Conceptual, Lógico y Físico:** Se debe generar el modelo conceptual, lógico y físico de acuerdo a los requisitos del taller mecánico "El Tuercas". Esto incluye la creación de entidades como clientes, vehículos, citas, servicios de reparación, etc. Los modelos deben ser subidos en un archivo junto con el proyecto.
+## Uso
 
-- **Landing Page para Clientes:** La aplicación debe contar con una landing page donde los clientes puedan ver información sobre el taller, servicios ofrecidos, horarios de funcionamiento y contacto. Además, deben poder ver los estados de sus vehículos, proporcionando detalles del vehículo y el tipo de servicio necesario.
+Para usar esta aplicación se debe abrir un navegador web y acceder a la dirección `http://localhost:5000/`. Se mostrará la landing page para los clientes, donde se puede ver información sobre el taller, los servicios ofrecidos, los horarios y el contacto[^2^][2]. También se puede ver el estado de los vehículos en reparación, proporcionando detalles del vehículo y el tipo de servicio necesario[^6^][6].
 
-- **Estado de Reparaciones para Clientes:** Los clientes deben poder ver el estado de sus vehículos en reparación. Esto incluye información sobre las reparaciones en curso, piezas que se están reemplazando y una estimación de tiempo para la finalización.
+Para acceder a la sección administrativa, se debe hacer clic en el botón "Iniciar sesión" en la esquina superior derecha de la página. Se pedirá un nombre de usuario y una contraseña. El nombre de usuario por defecto es "admin" y la contraseña es "admin123". Una vez iniciada la sesión, se mostrará una lista de todos los vehículos con detalles como nombre del cliente, tipo de servicio, fecha y estado de reparación[^7^][7]. Desde esta sección se puede marcar una reparación como "en progreso" o "completada", lo que generará una “notificación” al cliente en la landing page[^8^][8].
 
-### : Otros Requisitos
+También se puede acceder a las opciones de gestión de clientes y vehículos desde la sección administrativa. Se puede agregar nuevos clientes y sus vehículos asociados, editar detalles de clientes y vehículos existentes, y eliminar registros de clientes y vehículos[^4^][4]. También se puede asignar los servicios que se realizarán a cada cliente, como pueden ser, servicio de mantenimiento, servicio de afinación, servicio de cambio de neumáticos, servicio de alineado y balanceo, servicio de cambio de aceite y filtro y otros servicios.
 
-En esta sección se incluyen otros requisitos como el sistema de notificaciones, el diseño atractivo y los datos de prueba. A continuación se describen los requisitos en detalle:
+Para cerrar la sesión, se debe hacer clic en el botón "Cerrar sesión" en la esquina superior derecha de la página.
 
-- **Sistema de Notificaciones:** Se debe implementar un sistema de "notificaciones" a clientes y notificar a los clientes cuando su vehículo esté listo para ser recogido. Esto debe ser visible en el mismo listado de la landing page a través del estado "completado".
+## Datos de prueba
 
-- **Diseño Atractivo:** Se debe utilizar Bootstrap u otro framework para crear un diseño atractivo y responsive para la aplicación web.
+La aplicación cuenta con un seed con datos de prueba, incluyendo clientes, vehículos, servicios de reparación[^9^][9]. Estos datos se pueden modificar o eliminar desde la sección administrativa.
 
-- **Datos de Prueba:** Se debe crear un seed con datos de prueba, incluyendo clientes, vehículos, servicios de reparación.
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulte el archivo LICENSE para más detalles.
 
 ### Credenciales
 
