@@ -1,5 +1,7 @@
 # Aplicación web para el taller mecánico "El Tuercas" con Ruby on Rails
 
+[Ver sitio web](https://tallermecanico.onrender.com/)
+
 Este proyecto es una aplicación web desarrollada con Ruby on Rails que permite gestionar los clientes, vehículos, servicios y citas de reparación del taller mecánico "El Tuercas". La aplicación tiene una landing page para los clientes, donde pueden ver información sobre el taller y el estado de sus vehículos. También tiene una sección administrativa para el personal del taller, donde pueden gestionar las citas y los servicios de reparación, así como agregar, editar y eliminar clientes y vehículos. Además, la aplicación implementa un sistema de “notificaciones” para informar a los clientes cuando su vehículo esté listo para ser recogido.
 
 ## Durante el desarrollo de esta aplicaion se tuvieron en consideracion los siguientes aspectos
