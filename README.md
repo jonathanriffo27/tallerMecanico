@@ -79,5 +79,5 @@ La aplicaci√≥n cuenta con un seed con datos de prueba, incluyendo clientes, veh√
 
 ### Credenciales
 
-- Administrador: email:admin@admin.com
+- Administrador: email: admin@admin.com
 - Password: 123456
