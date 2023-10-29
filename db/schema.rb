@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_14_045422) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -41,9 +44,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_14_045422) do
   end
 
   create_table "vehicle_services", force: :cascade do |t|
-    t.integer "vehicle_id", null: false
-    t.integer "service_id", null: false
-    t.boolean "progress"
+    t.bigint "vehicle_id", null: false
+    t.bigint "service_id", null: false
+    t.boolean "progress", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["service_id"], name: "index_vehicle_services_on_service_id"
@@ -51,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_14_045422) do
   end
 
   create_table "vehicles", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "brand"
     t.string "model"
     t.string "year"

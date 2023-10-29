@@ -75,11 +75,7 @@ Para cerrar la sesión, se debe hacer clic en el botón "Cerrar sesión" en la e
 
 La aplicación cuenta con un seed con datos de prueba, incluyendo clientes, vehículos, servicios de reparación. Estos datos se pueden modificar o eliminar desde la sección administrativa.
 
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Consulte el archivo LICENSE para más detalles.
-
 ### Credenciales
 
-Administrador: email:admin@admin.com
-password: 123456
+- Administrador: email:admin@admin.com
+- Password: 123456
