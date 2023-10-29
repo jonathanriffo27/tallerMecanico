@@ -52,5 +52,5 @@ User.create(
   password_confirmation: '123456',
   email: 'admin@admin.com',
   phone: Faker::PhoneNumber.cell_phone_in_e164,
-  role: %i[admin]
+  role: 'admin'
 )
