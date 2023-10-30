@@ -13,9 +13,13 @@
   <body>
     <%= render 'shared/navbar' %>
     <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert my-1 py-1"><%= alert %></p>
-      <%= yield %>
+      <div class='text-center'>
+        <p class="notice" style="color: green"><%= notice %></p>
+        <p class="alert my-1 py-1" style="color: red"><%= alert %></p>
+      </div>
+      <div class='mt-3'>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
